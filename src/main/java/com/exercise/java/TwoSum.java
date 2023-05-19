@@ -10,7 +10,7 @@ public class TwoSum {
         }
 
 //        public static void twoSum(int[] nums, int target) {
-//            HashMap<Integer, Integer> map = new HashMap<>();
+//            HashMap<Integer, Integer> map = new HashMap<>();"
 //            for (int i = 0; i < nums.length; i++) {
 //                int complement = target - nums[i];
 //                if (map.containsKey(complement)) {
@@ -23,16 +23,17 @@ public class TwoSum {
 //        }
 
     public static void twoSum(int[] nums, int target) {
-      HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
-      for (int i=0;i< nums.length;i++){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
             map.put(nums[i],i);
-            int second=target - nums[i];
-           if(map.containsKey(second)){
-          System.out.println(map.get(second) +i);
-          map.put(nums[i],i);
-        //  System.out.println(nums[i] i);
-      }
-    }
+            int second=target-nums[i];
+            if(map.containsKey(second)){
+                System.out.println(map.get(second)+","+i);
+                return;
+            }
+            map.put(nums[i],i);
+        }
+        System.out.println("two nums doesn't add up");
     }
 }
 
